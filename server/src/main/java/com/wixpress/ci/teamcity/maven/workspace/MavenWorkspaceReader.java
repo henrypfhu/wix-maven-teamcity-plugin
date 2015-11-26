@@ -78,7 +78,6 @@ public class MavenWorkspaceReader implements WorkspaceReader {
 
     private MavenModule readModuleToArtifacts(Model model, WorkspaceDir projectDir) {
         MavenModule mavenModule = toProjectModule(model);
-        System.out.println("Model: " + model.toString());
 
         mavenModules.add(mavenModule);
         for (String module: model.getModules()) {
