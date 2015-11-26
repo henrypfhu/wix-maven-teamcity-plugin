@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/maven-teamcity-plugin.iml" filepath="$PROJECT_DIR$/maven-teamcity-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/distribution/maven-teamcity-plugin-distribution.iml" filepath="$PROJECT_DIR$/distribution/maven-teamcity-plugin-distribution.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server/maven-teamcity-plugin-server.iml" filepath="$PROJECT_DIR$/server/maven-teamcity-plugin-server.iml" />
+    </modules>
+  </component>
+</project>
