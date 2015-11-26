@@ -78,6 +78,8 @@ public class MavenWorkspaceReader implements WorkspaceReader {
 
     private MavenModule readModuleToArtifacts(Model model, WorkspaceDir projectDir) {
         MavenModule mavenModule = toProjectModule(model);
+        System.out.println("Model: " + model.toString());
+
         mavenModules.add(mavenModule);
         for (String module: model.getModules()) {
             WorkspaceDir moduleProjectDir = workspaceFilesystem.newDir(projectDir, module);
@@ -86,6 +88,14 @@ public class MavenWorkspaceReader implements WorkspaceReader {
                 try {
                     Model moduleModel = loadLocalPom(modulePomFile);
                     listener.loadedModulePomFile(model, module, modulePomFile);
+
+                    //Fixed the bug for the submodule of parent pom without groupId and version
+                    //by HenryHu <henry.pf.hu@gmail.com>
+                    if(moduleModel.getGroupId() == null)
+                        moduleModel.setGroupId(model.getGroupId());
+                    if(moduleModel.getVersion() == null)
+                        moduleModel.setVersion(model.getVersion());
+
                     mavenModule.addSubModule(readModuleToArtifacts(moduleModel, moduleProjectDir));
                 } catch (ModelBuildingException e) {
                     listener.failureReadingModulePom(model.getId(), module, modulePomFile, e);
@@ -132,11 +142,14 @@ public class MavenWorkspaceReader implements WorkspaceReader {
 
     private MavenModule findModule(Artifact artifact) {
         for (MavenModule mavenModule : mavenModules) {
+            try{
             if (mavenModule.getGroupId().equals(artifact.getGroupId()) &&
                     mavenModule.getArtifactId().equals(artifact.getArtifactId()) &&
                     mavenModule.getVersion().equals(artifact.getVersion()) &&
                     artifact.getExtension().equals("pom"))
                 return mavenModule;
+            }catch(Exception ex){
+            }
         }
         return null;
     }

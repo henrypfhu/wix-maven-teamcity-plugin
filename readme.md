@@ -1,5 +1,5 @@
-Maven Dependencies Tab Plugin
-======================
+Maven Dependencies Tab Plugin (fixed by Henry Hu <henry.pf.hu@gmail.com> to support TeamCity 9.1.4)
+===================================================================================================
 
 The Maven dependencies tab plugin adds a tab to a build configuration displaying the TeamCity build dependencies based on the Maven dependencies of the project.
 The plugin displays result such as
@@ -32,7 +32,7 @@ We show labels on the dependencies for
 
 
 Configuration and Assumptions
-------------
+------------------------
 
 1. The Plugin reads the maven configuration of the box TeamCity is installed on. Just ensure you have the settings.xml file configured just the same as for the build agents. No other configuration is required.
 2. The Plugin assumes that a project has a pom.xml file in the build configuration VCS root. 

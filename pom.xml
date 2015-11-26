@@ -4,13 +4,12 @@
 
     <groupId>com.wixpress.ci.teamcity</groupId>
     <artifactId>maven-teamcity-plugin</artifactId>
-    <version>1.4-SNAPSHOT</version>
+    <version>9.1.4</version>
     <packaging>pom</packaging>
 
     <name>teamcity maven dependencies plugin</name>
 
     <properties>
-        <teamcity.version>6.5.5</teamcity.version>
         <finalZipName>maven-dependencies-${project.version}</finalZipName>
         <teamcity.data.path>${user.home}/.BuildServer</teamcity.data.path>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -68,93 +67,16 @@
             </dependency>
 
             <dependency>
-                <groupId>org.jetbrains.teamcity.agent</groupId>
-                <artifactId>agent</artifactId>
-                <version>${teamcity.version}</version>
+                <groupId>org.jetbrains.teamcity</groupId>
+                <artifactId>agent-api</artifactId>
+                <version>9.1.4</version>
                 <scope>provided</scope>
             </dependency>
+
             <dependency>
-                <groupId>org.jetbrains.teamcity.agent</groupId>
-                <artifactId>agent-openapi</artifactId>
-                <version>${teamcity.version}</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.jetbrains.teamcity.agent</groupId>
-                <artifactId>annotations</artifactId>
-                <version>${teamcity.version}</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.jetbrains.teamcity.agent</groupId>
-                <artifactId>common</artifactId>
-                <version>${teamcity.version}</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.jetbrains.teamcity.agent</groupId>
-                <artifactId>common-runtime</artifactId>
-                <version>${teamcity.version}</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.jetbrains.teamcity.agent</groupId>
-                <artifactId>runtime-util</artifactId>
-                <version>${teamcity.version}</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.jetbrains.teamcity.agent</groupId>
-                <artifactId>server-logging</artifactId>
-                <version>${teamcity.version}</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.jetbrains.teamcity.tomcat</groupId>
-                <artifactId>annotations-api</artifactId>
-                <version>${teamcity.version}</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.jetbrains.teamcity.webapp</groupId>
-                <artifactId>annotations</artifactId>
-                <version>${teamcity.version}</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.jetbrains.teamcity.webapp</groupId>
-                <artifactId>common-api</artifactId>
-                <version>${teamcity.version}</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.jetbrains.teamcity.webapp</groupId>
-                <artifactId>server</artifactId>
-                <version>${teamcity.version}</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.jetbrains.teamcity.webapp</groupId>
+                <groupId>org.jetbrains.teamcity</groupId>
                 <artifactId>server-api</artifactId>
-                <version>${teamcity.version}</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.jetbrains.teamcity.webapp</groupId>
-                <artifactId>spring</artifactId>
-                <version>${teamcity.version}</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.jetbrains.teamcity.webapp</groupId>
-                <artifactId>spring-webmvc</artifactId>
-                <version>${teamcity.version}</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.jetbrains.teamcity.webapp</groupId>
-                <artifactId>util</artifactId>
-                <version>${teamcity.version}</version>
+                <version>9.1.4</version>
                 <scope>provided</scope>
             </dependency>
 

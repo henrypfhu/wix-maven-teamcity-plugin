@@ -5,58 +5,31 @@
     <parent>
         <groupId>com.wixpress.ci.teamcity</groupId>
         <artifactId>maven-teamcity-plugin</artifactId>
-        <version>1.4-SNAPSHOT</version>
+        <version>9.1.4</version>
     </parent>
 
     <groupId>com.wixpress.ci.teamcity</groupId>
     <artifactId>maven-teamcity-plugin-server</artifactId>
-    <version>1.4-SNAPSHOT</version>
+    <version>9.1.4</version>
     <name>teamcity maven dependencies plugin server</name>
 
     <properties>
         <aetherVersion>1.13.1</aetherVersion>
         <mavenVersion>3.0.4</mavenVersion>
-        <wagonVersion>1.0</wagonVersion>
+        <wagonVersion>2.1</wagonVersion>
     </properties>
 
 
     <dependencies>
         <!-- TeamCity Libraries -->
         <dependency>
-            <groupId>org.jetbrains.teamcity.agent</groupId>
-            <artifactId>common</artifactId>
+            <groupId>org.jetbrains.teamcity</groupId>
+            <artifactId>agent-api</artifactId>
         </dependency>
+
         <dependency>
-            <groupId>org.jetbrains.teamcity.agent</groupId>
-            <artifactId>runtime-util</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.jetbrains.teamcity.webapp</groupId>
-            <artifactId>annotations</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.jetbrains.teamcity.webapp</groupId>
-            <artifactId>common-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.jetbrains.teamcity.webapp</groupId>
-            <artifactId>server</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.jetbrains.teamcity.webapp</groupId>
+            <groupId>org.jetbrains.teamcity</groupId>
             <artifactId>server-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.jetbrains.teamcity.webapp</groupId>
-            <artifactId>spring</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.jetbrains.teamcity.webapp</groupId>
-            <artifactId>spring-webmvc</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.jetbrains.teamcity.webapp</groupId>
-            <artifactId>util</artifactId>
         </dependency>
 
         <!-- Maven and aether libraries-->

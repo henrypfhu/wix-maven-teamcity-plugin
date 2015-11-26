@@ -56,7 +56,7 @@ public class TestMavenBuildDependenciesAnalyzerAnalyzeDependencies {
         when(dependenciesDao.loadModuleDependencies(buildType)).thenReturn(serializedDefaultModuleStorage());
         when(buildType.getVcsRootInstances()).thenReturn(ImmutableList.of(vcsRootInstance));
         when(vcsRootInstance.getName()).thenReturn("vcs1");
-        when(vcsRootInstance.getCurrentRevision()).thenReturn("1.2");
+        when(vcsRootInstance.getCurrentRevision().getVersion()).thenReturn("1.2");
 
         MavenDependenciesResult result = analyzer.analyzeDependencies(buildType);
 
@@ -70,7 +70,7 @@ public class TestMavenBuildDependenciesAnalyzerAnalyzeDependencies {
         when(dependenciesDao.loadModuleDependencies(buildType)).thenReturn(serializedDefaultModuleStorage());
         when(buildType.getVcsRootInstances()).thenReturn(ImmutableList.of(vcsRootInstance));
         when(vcsRootInstance.getName()).thenReturn("vcs1");
-        when(vcsRootInstance.getCurrentRevision()).thenReturn("1.3");
+        when(vcsRootInstance.getCurrentRevision().getVersion()).thenReturn("1.3");
 
         MavenDependenciesResult result = analyzer.analyzeDependencies(buildType);
 
@@ -84,7 +84,7 @@ public class TestMavenBuildDependenciesAnalyzerAnalyzeDependencies {
         when(dependenciesDao.loadModuleDependencies(buildType)).thenReturn(serializedDefaultModuleStorage());
         when(buildType.getVcsRootInstances()).thenReturn(ImmutableList.of(vcsRootInstance));
         when(vcsRootInstance.getName()).thenReturn("vcs1");
-        when(vcsRootInstance.getCurrentRevision()).thenReturn("1.2");
+        when(vcsRootInstance.getCurrentRevision().getVersion()).thenReturn("1.2");
 
         MavenDependenciesResult result = analyzer.getBuildDependencies(buildType, true);
 
@@ -98,7 +98,7 @@ public class TestMavenBuildDependenciesAnalyzerAnalyzeDependencies {
         when(dependenciesDao.loadModuleDependencies(buildType)).thenReturn(serializedDefaultModuleStorage());
         when(buildType.getVcsRootInstances()).thenReturn(ImmutableList.of(vcsRootInstance));
         when(vcsRootInstance.getName()).thenReturn("vcs1");
-        when(vcsRootInstance.getCurrentRevision()).thenReturn("1.3");
+        when(vcsRootInstance.getCurrentRevision().getVersion()).thenReturn("1.3");
 
         MavenDependenciesResult result = analyzer.getBuildDependencies(buildType, true);
 
@@ -112,7 +112,7 @@ public class TestMavenBuildDependenciesAnalyzerAnalyzeDependencies {
         when(dependenciesDao.loadModuleDependencies(buildType)).thenReturn(serializedDefaultModuleStorage());
         when(buildType.getVcsRootInstances()).thenReturn(ImmutableList.of(vcsRootInstance));
         when(vcsRootInstance.getName()).thenReturn("vcs1");
-        when(vcsRootInstance.getCurrentRevision()).thenReturn("1.3");
+        when(vcsRootInstance.getCurrentRevision().getVersion()).thenReturn("1.3");
 
         MavenDependenciesResult result = analyzer.getBuildDependencies(buildType, false);
 
@@ -139,7 +139,7 @@ public class TestMavenBuildDependenciesAnalyzerAnalyzeDependencies {
         when(dependenciesDao.loadModuleDependencies(buildType)).thenReturn(serializedDefaultModuleStorage());
         when(buildType.getVcsRootInstances()).thenReturn(ImmutableList.of(vcsRootInstance));
         when(vcsRootInstance.getName()).thenReturn("vcs1");
-        when(vcsRootInstance.getCurrentRevision()).thenReturn("1.2");
+        when(vcsRootInstance.getCurrentRevision().getVersion()).thenReturn("1.2");
 
         MavenDependenciesResult result = analyzer.analyzeDependencies(buildType);
 
